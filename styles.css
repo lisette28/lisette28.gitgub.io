@@ -1,0 +1,206 @@
+body {
+    font-family: 'cursive';
+    margin: 0;
+    padding: 0;
+    background-image: url("../img//imagen.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;}
+#game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;}
+#game-board-container {
+    position: relative;
+    margin-top: 20px;}
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    margin: auto;}
+.cell {
+    width: 100px;
+    height: 100px;
+    border: none;
+    font-size: 48px;
+    text-align: center;
+    line-height: 100px;
+    cursor: pointer;
+    background-color: #85f0e2ef;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 5px rgba(5, 5, 5, 0.3);
+    border-radius: 10px;}
+.cell:hover {
+    background-color: #ecf5f3ab;}
+#game-board .cell::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: transparent;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);}
+.cell::after {
+    content: '';}
+.cell.X::after {
+    background-color: #ff5858;}
+.cell.O::after {
+    background-color: #65a9ff;}
+#restart-btn {
+    background-color: #16b11bd8;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;}
+#restart-btn:hover {
+    background-color: #45a049;}
+#winner-message {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+    color: aliceblue;
+}
+#chat-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+#chat-box {
+    width: 300px;
+    border: 1px solid #000000;
+    padding: 10px;
+    background-image: url("../img//img2.jpg");
+    background-size: cover;
+}
+#chat-messages {
+    height: 200px;
+    overflow-y: scroll;
+}
+#chat-input {
+    width: calc(100% - 70px);
+    margin-right: 10px;
+}
+#send-btn {
+    background-color: #008CBA;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+}
+#send-btn:hover {
+    background-color: #005f79;
+}
+.wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-image: url(../img/wave.png);
+    background-size: auto;
+    animation: wave 4s linear infinite;
+    opacity: 0.3;
+}
+@keyframes wave {
+    0% {
+        background-position-x: 0;
+    }
+    100% {
+        background-position-x: 1000px;
+    }
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+h1 {
+    font-family: 'Roboto', sans-serif;
+    /* Fuente personalizada */
+    font-size: 2em;
+    /* Tamaño de la letra */
+    font-weight: bold;
+    /* Grosor de la letra */
+    text-transform: uppercase;
+    /* Convertir texto a mayúsculas */
+    color: rgb(255, 255, 255);
+    /* Color azul */
+    text-shadow: 2px 2px 0px #333;
+    /* Sombra del texto */
+    letter-spacing: 2px;
+    /* Espacio entre letras */
+    margin: 0;
+    /* Elimina el margen predeterminado */
+    padding: 20px;
+    /* Añade un poco de espacio alrededor del texto */
+    text-align: center;
+    /* Centra el texto horizontalmente */
+    animation: moveText 5s infinite alternate;
+    /* Agrega la animación */
+}
+@keyframes moveText {
+    0% {
+        transform: perspective(100px) rotateX(20deg) translateY(0);
+    }
+    50% {
+        transform: perspective(100px) rotateX(20deg) translateY(20px);
+    }
+    100% {
+        transform: perspective(100px) rotateX(20deg) translateY(0);
+    }
+}
+#clear-chat-btn {
+    background-color: #008CBA;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+}
+#increase-font-size-btn {
+    background-color: #008CBA;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+}
+#decrease-font-size-btn {
+    background-color: #008CBA;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+}
